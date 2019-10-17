@@ -26,18 +26,11 @@ public class KthLargestElement {
 		    }
 		  }
 		  
-		  System.out.println("The Index is:"+ index);
-		  for(int num:nums) {
-			  System.out.print(" "+num);
-		  }
-		  System.out.println("\n");
 		  
 		  swap(nums, index, pivot);
 		    
 		  
-		    
-		  
-		  // count the nums that are > pivot from high
+		  // count the nums that are > pivot from high0
 		  int count = high - index + 1;
 		  // pivot is the one!
 		  if (count == k) return nums[index];
