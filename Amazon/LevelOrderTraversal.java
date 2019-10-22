@@ -25,6 +25,7 @@ public class LevelOrderTraversal {
 	        Queue<TreeNode> queue = new LinkedList<TreeNode>();
 	        List<List<Integer>> wrapList = new LinkedList<List<Integer>>();
 	        
+	        
 	        if(root == null) return wrapList;
 	        
 	        queue.offer(root);
