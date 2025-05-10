@@ -7,7 +7,7 @@ public class CoinChange2 {
 		int[][] dp = new int[coins.length+1][amount+1];
 		dp[0][0] =1;
 		
-		for(int i=0;i<=coins.length;i++) {
+		for(int i=1;i<=coins.length;i++) {
 			
 			dp[i][0] = 1;
 			
@@ -15,7 +15,7 @@ public class CoinChange2 {
 				
 				int currentCoinValue = coins[i-1];
 				int withoutThisCoin = dp[i-1][j];
-				int withThisCoin = currentCoinValue <= j? dp[i][j-currentCoinValue]:0;
+				int withThisCoin = (currentCoinValue <= j)? dp[i][j-currentCoinValue]:0;
 				dp[i][j] = withoutThisCoin + withThisCoin;		
 			}
 			

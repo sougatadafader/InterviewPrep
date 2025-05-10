@@ -49,7 +49,16 @@ public class LCAbt {
 	    if (root == null || root == p || root == q) return root;
 	    TreeNode left = lowestCommonAncestorRecursive(root.left, p, q);
 	    TreeNode right = lowestCommonAncestorRecursive(root.right, p, q);
-	    return left == null ? right : right == null ? left : root;
+	    //return left == null ? right : right == null ? left : root;
+	    if (left == null) {
+	        return right;
+	    } else {
+	        if (right == null) {
+	            return left;
+	        } else {
+	            return root;
+	        }
+	    }
 	}
 	
 	
